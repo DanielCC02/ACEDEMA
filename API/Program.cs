@@ -29,7 +29,7 @@ builder.Services.AddScoped<LogicaMatricula>();
 builder.Services.AddScoped<LogicaUtilitarios>();
 builder.Services.AddScoped<JwtTokenHelper>();
 builder.Services.AddScoped<LogicaForo>();
-
+builder.Services.AddScoped<LogicaClases>();
 
 builder.Services.AddScoped<BlobStorageService>(sp =>
 {
@@ -57,7 +57,7 @@ builder.Services.AddCors(options =>
             .WithOrigins("http://localhost:3000")   // Cambia al origen de tu frontend
             .AllowAnyHeader()
             .AllowAnyMethod();
-            // .AllowCredentials(); // si necesitas enviar cookies o auth
+        // .AllowCredentials(); // si necesitas enviar cookies o auth
     });
 });
 // ───────────────────────────────────────────────────────────────────────────────

@@ -47,7 +47,7 @@ public class JwtTokenHelper
         {
         new Claim(ClaimTypes.Email, correo),
         new Claim(ClaimTypes.Role, rol),
-        new Claim("tipo", "login")
+        new Claim("type", "login")
     };
 
         var token = new JwtSecurityToken(
